@@ -5,6 +5,7 @@
 #![allow(clippy::manual_range_contains)]
 #![allow(clippy::comparison_chain)]
 #![allow(clippy::bool_to_int_with_if)]
+#![warn(clippy::used_underscore_binding)]
 
 use std::env;
 use std::fmt::Display;
