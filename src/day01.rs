@@ -12,9 +12,7 @@ fn a_with_input(input: &str) -> i64 {
     let mut right = Vec::new();
 
     for line in input.lines() {
-        let mut ind = 0;
-
-        for token in line.split_ascii_whitespace() {
+        for (ind, token) in line.split_ascii_whitespace().enumerate() {
             let parsed: i64 = token.parse().unwrap();
             if ind == 0 {
                 left.push(parsed);
@@ -23,8 +21,6 @@ fn a_with_input(input: &str) -> i64 {
             } else {
                 panic!("Bad ind {ind}");
             }
-
-            ind += 1;
         }
     }
 
@@ -50,9 +46,7 @@ fn b_with_input(input: &str) -> i64 {
     let mut right: HashMap<i64, i64> = HashMap::default();
 
     for line in input.lines() {
-        let mut ind = 0;
-
-        for token in line.split_ascii_whitespace() {
+        for (ind, token) in line.split_ascii_whitespace().enumerate() {
             let parsed: i64 = token.parse().unwrap();
             if ind == 0 {
                 *left.entry(parsed).or_default() += 1;
@@ -61,8 +55,6 @@ fn b_with_input(input: &str) -> i64 {
             } else {
                 panic!("Bad ind {ind}");
             }
-
-            ind += 1;
         }
     }
 
