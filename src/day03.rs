@@ -42,7 +42,7 @@ fn b_with_input(input: &str) -> u64 {
                     total += num_a * num_b;
                 }
             }
-            other => panic!("Bad tag {other} (probably unreachable)")
+            other => panic!("Bad tag {other} (probably unreachable)"),
         }
     }
     total
