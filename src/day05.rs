@@ -1,4 +1,5 @@
-use ahash::{HashMap, HashSet};
+use ahash::HashMap;
+use ahash::HashSet;
 use regex::Regex;
 
 const INPUT_FILE: &str = "input/05.txt";
