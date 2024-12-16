@@ -26,8 +26,10 @@ fn a_with_input(input: &str) -> u64 {
 
 fn can_be_solved_a(line: &Line) -> bool {
     fn can_be_solved_running(goal: u64, running: u64, nums: &[u64]) -> bool {
-        if nums.len() == 0 {
+        if nums.is_empty() {
             goal == running
+        } else if running > goal {
+            false
         } else {
             // try each op
             let next = running.checked_add(nums[0]).unwrap();
@@ -63,8 +65,10 @@ fn b_with_input(input: &str) -> u64 {
 
 fn can_be_solved_b(line: &Line) -> bool {
     fn can_be_solved_running(goal: u64, running: u64, nums: &[u64]) -> bool {
-        if nums.len() == 0 {
+        if nums.is_empty() {
             goal == running
+        } else if running > goal {
+            false
         } else {
             // try each op
             let next = running.checked_add(nums[0]).unwrap();
